@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#ff7524",
+              "error": "#ff716c",
+              "surface-dim": "#0e0e10",
+              "surface-container-lowest": "#000000",
+              "on-primary-fixed-variant": "#5c2200",
+              "on-primary-fixed": "#3c1300",
+              "surface-container-low": "#131315",
+              "secondary": "#ff7524",
+              "on-primary-container": "#fff6f3",
+              "outline-variant": "#48474a",
+              "on-tertiary-fixed": "#1f0052",
+              "primary-dim": "#ff7524",
+              "primary-fixed-dim": "#ffb28d",
+              "inverse-on-surface": "#565457",
+              "on-primary": "#ffffff",
+              "secondary-fixed": "#ffc5ab",
+              "on-secondary-container": "#fff6f3",
+              "background": "#0e0e10",
+              "primary-container": "#a04100",
+              "surface-container": "#19191c",
+              "tertiary": "#ac89ff",
+              "tertiary-dim": "#874cff",
+              "on-tertiary-container": "#f8f1ff",
+              "on-secondary": "#3c1300",
+              "error-dim": "#d7383b",
+              "surface-variant": "#262528",
+              "tertiary-container": "#7000ff",
+              "on-error-container": "#ffa8a3",
+              "on-secondary-fixed-variant": "#8a3700",
+              "secondary-container": "#a04100",
+              "tertiary-fixed-dim": "#b190ff",
+              "secondary-dim": "#ff7524",
+              "on-tertiary": "#290067",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "on-secondary-fixed": "#5c2200",
+              "primary": "#ff7524",
+              "inverse-primary": "#a04100",
+              "tertiary-fixed": "#bda1ff",
+              "on-surface": "#f9f5f8",
+              "secondary-fixed-dim": "#ffb28d",
+              "surface-container-high": "#1f1f22",
+              "surface-bright": "#2c2c2f",
+              "on-surface-variant": "#adaaad",
+              "on-error": "#490006",
+              "error-container": "#9f0519",
+              "outline": "#767577",
+              "surface-container-highest": "#262528",
+              "surface": "#0e0e10",
+              "primary-fixed": "#ffc5ab",
+              "inverse-surface": "#fcf8fb",
+              "on-background": "#f9f5f8"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(38, 37, 40, 0.3);
+            backdrop-filter: blur(20px);
+            border-top: 0.5px solid rgba(255, 117, 36, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-orange-500/10 shadow-[0_0_30px_rgba(255,117,36,0.05)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-primary dark:text-primary font-headline">LTL</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-orange-200 transition-colors" href="#">Home</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-primary border-b-2 border-primary pb-1" href="#">About</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-orange-200 transition-colors" href="#">Technology</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-orange-200 transition-colors" href="#">Simulations</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="font-['Space_Grotesk'] uppercase tracking-widest text-xs px-6 py-2 bg-primary text-on-primary font-bold hover:opacity-80 active:scale-95 transition-all">Launch Console</button>
+<span class="material-symbols-outlined text-primary text-2xl cursor-pointer">account_circle</span>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-32">
+<!-- Hero Section -->
+<section class="relative h-[716px] flex items-center px-8 md:px-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale opacity-40" data-alt="Deep space satellite view from orbital trajectory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxuvsr4VVqMEt32CBZlEUf1q33F3Jogf61OhhWq6P0WTKPnxhhgp-WXfX3dFlSy-vg50GQ-GuIe9xhfKrwADieNyfQeZyWC1QaqXfYSVQtt4cctpvuJs5J3zUL2Zro8ESXIZedVrrSbzayjIJNxxo0F9_84BUYFh0-mHkHLTLNMZRb2l6vHO__vDQvu361X_OHUX63Kg7z15575EuxX5JiKG7OK5NpGuQ6AeD46fr4sBCcJiIWmRw7x7jhxFVlraEm7uH8gdBrvlI"/>
+</div>
+<div class="relative z-20 max-w-4xl">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-2 h-2 bg-primary rounded-none animate-pulse"></span>
+<span class="font-label text-primary text-xs uppercase tracking-[0.3em]">System Identity: LARGER THAN LIFE</span>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter leading-none mb-8">PIONEERING THE <span class="text-primary">VOID.</span></h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl font-light leading-relaxed">
+                    We engineer the autonomous infrastructure required for humanity's expansion beyond the Karman line. From deep-space orbital maintenance to lunar manufacturing, LTL is the mechanical pulse of the next frontier.
+                </p>
+</div>
+</section>
+<!-- Our Story / Values - Bento Grid -->
+<section class="px-8 md:px-24 py-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Card -->
+<div class="md:col-span-8 bg-surface-container-low p-12 relative overflow-hidden flex flex-col justify-end min-h-[500px]">
+<div class="absolute top-0 right-0 p-8">
+<span class="font-label text-4xl opacity-5 text-on-surface">EST. 2084</span>
+</div>
+<div class="relative z-10">
+<h2 class="font-headline text-3xl font-bold mb-6 tracking-tight">THE GENESIS OF PRECISION</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-xl">
+                            Founded in the wake of the first lunar industrial revolution, Larger than Life was born from a singular vision: space should not be explored by humans alone, but by machines built to endure the eternal cold. Our first rover, the K-1 Pioneer, established the framework for autonomous resource extraction that powers 40% of current Martian outposts.
+                        </p>
+</div>
+</div>
+<!-- Small Card -->
+<div class="md:col-span-4 bg-primary-container p-8 flex flex-col justify-between text-on-primary-container">
+<span class="material-symbols-outlined text-5xl">rocket_launch</span>
+<div>
+<h3 class="font-headline text-2xl font-bold mb-4">RAPID DEPLOYMENT</h3>
+<p class="font-body text-sm opacity-90">Our modular robotics can be launched and operational within 48 hours of orbital insertion, anywhere in the inner solar system.</p>
+</div>
+</div>
+<!-- Mid Card -->
+<div class="md:col-span-5 bg-surface-container p-10 flex flex-col gap-6">
+<div class="w-12 h-1 bg-primary"></div>
+<h3 class="font-headline text-2xl font-bold">CORE PROTOCOLS</h3>
+<ul class="space-y-4 font-label text-xs uppercase tracking-widest text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="w-1 h-1 bg-primary"></span> Zero-Latency Autonomy</li>
+<li class="flex items-center gap-3"><span class="w-1 h-1 bg-primary"></span> Radiation-Hardened Logic</li>
+<li class="flex items-center gap-3"><span class="w-1 h-1 bg-primary"></span> Kinetic Energy Harvesting</li>
+<li class="flex items-center gap-3"><span class="w-1 h-1 bg-primary"></span> Multi-Agent Swarm Intelligence</li>
+</ul>
+</div>
+<!-- Image Card -->
+<div class="md:col-span-7 h-[300px] relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern clean-room robotic assembly facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWMc-c7NVjgQqZA2h62eg1Os4KCAQKAHLw3vI3PkKwSQ52_y2-DF2CpADGyP8wYpODy6aQwgzhRR2gw7G2CRyxEI3RPAsnywu7F0rYRH7DbYV4Is_HjV-jL2AbHfhQnAAhMOTCxQxkPioJZy0zJfTCnqGrU5GmaZq7ooH3UbXQv6dRKkg6cnGq4Jb0lFR9dGkVtnnwn5QO0rxm75swX50NOjE9e82PvkePHuZPlBwcUTRZn7YB_TVkMHF7tI70Tf6BWMGltVSClA4"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+</div>
+</section>
+<!-- Contact & Map Section -->
+<section class="px-8 md:px-24 py-32 border-t border-white/5">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 max-w-7xl mx-auto">
+<!-- Contact Form -->
+<div>
+<h2 class="font-headline text-4xl font-bold mb-4 tracking-tight">TRANSMIT INQUIRY</h2>
+<p class="text-on-surface-variant mb-12 max-w-md">Our communication array is active 24/7. Expect a response within one orbital cycle.</p>
+<form class="space-y-10">
+<div class="relative">
+<label class="font-label text-[10px] text-primary uppercase tracking-[0.2em] mb-2 block">Originator Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline/30 focus:border-primary focus:ring-0 text-on-surface font-body py-4 placeholder:text-on-surface-variant/30" placeholder="ENTER IDENTIFIER" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label text-[10px] text-primary uppercase tracking-[0.2em] mb-2 block">Secure Channel (Email)</label>
+<input class="w-full bg-transparent border-0 border-b border-outline/30 focus:border-primary focus:ring-0 text-on-surface font-body py-4 placeholder:text-on-surface-variant/30" placeholder="USER@NETWORK.VOX" type="email"/>
+</div>
+<div class="relative">
+<label class="font-label text-[10px] text-primary uppercase tracking-[0.2em] mb-2 block">Telemetry Payload</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline/30 focus:border-primary focus:ring-0 text-on-surface font-body py-4 placeholder:text-on-surface-variant/30 resize-none" placeholder="DESCRIBE YOUR MISSION REQUIREMENTS..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-headline font-bold py-5 tracking-widest uppercase hover:opacity-90 transition-all flex items-center justify-center gap-4 group">
+                            Initiate Broadcast
+                            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">send</span>
+</button>
+</form>
+</div>
+<!-- Location & Social -->
+<div class="flex flex-col gap-12">
+<div class="bg-surface-container-high p-1 relative overflow-hidden h-[400px]">
+<img class="w-full h-full object-cover grayscale opacity-50" data-alt="Abstract satellite map of cratered lunar surface" data-location="Lunar South Pole - Shackleton Crater" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_uS19R0F18Flz2SXuZl-EQzJrnPcPyU7-2xHaD27WXinCrB2WXaIVleciPRY_RSZ-aSYaycQ5TtjVPV5xbFqRB9k2zOjHr__Qsn9lJlM4u7M_3kMtmN7iPWURHjgMLcC9mZp1pdmi9IVPJBSJ67b_zciSsPrVnr_g2spEqL3GcBUl9JZen9Pl3pd3ggnUPA4WD9yZOHsSiI46q3srN6ReKpxScK08uJej7-trSySBcBarVYs9Is2rHPkVbW4TceKPFL9uWVmMkoY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 p-4 glass-panel flex justify-between items-center">
+<div>
+<p class="font-label text-[10px] text-primary uppercase tracking-widest">COORDINATES</p>
+<p class="font-body text-xs mt-1">89.9°S 0.0°E // SHACKLETON BASE</p>
+</div>
+<span class="w-3 h-3 bg-primary animate-ping rounded-full"></span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h5 class="font-label text-[10px] text-primary uppercase tracking-widest mb-4">Command Center</h5>
+<address class="not-italic text-on-surface-variant text-sm leading-relaxed">
+                                Sector 7G, High-Orbit Hub<br/>
+                                GSO-Station 4, L1 Gateway<br/>
+                                Earth-Moon System
+                            </address>
+</div>
+<div>
+<h5 class="font-label text-[10px] text-primary uppercase tracking-widest mb-4">Frequency Hubs</h5>
+<div class="flex gap-6">
+<a class="text-on-surface hover:text-primary transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a class="text-on-surface hover:text-primary transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</a>
+<a class="text-on-surface hover:text-primary transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-black dark:bg-black w-full border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 max-w-screen-2xl mx-auto">
+<div class="text-lg font-black text-primary font-headline tracking-tighter">LTL</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-zinc-500 hover:text-orange-300 transition-colors" href="#">Systems</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-zinc-500 hover:text-orange-300 transition-colors" href="#">GitHub</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-zinc-500 hover:text-orange-300 transition-colors" href="#">Documentation</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-zinc-500 hover:text-orange-300 transition-colors" href="#">Status</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-zinc-500 hover:text-orange-300 transition-colors" href="#">Privacy</a>
+</div>
+<div class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-primary opacity-60">
+                © 2124 LARGER THAN LIFE. ALL SYSTEMS OPERATIONAL.
+            </div>
+</div>
+</footer>
+</body></html>

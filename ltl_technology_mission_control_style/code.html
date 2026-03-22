@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LTL | Mission Control - Technology</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#565457",
+              "on-secondary-container": "#fff6f3",
+              "on-tertiary": "#290067",
+              "on-primary-fixed": "#003f43",
+              "tertiary-container": "#7000ff",
+              "on-primary-fixed-variant": "#005e64",
+              "tertiary-dim": "#874cff",
+              "on-surface-variant": "#adaaad",
+              "surface-variant": "#262528",
+              "secondary-dim": "#ff7524",
+              "on-secondary-fixed-variant": "#8a3700",
+              "surface-container-high": "#1f1f22",
+              "on-background": "#f9f5f8",
+              "outline-variant": "#48474a",
+              "error": "#ff716c",
+              "surface-container-highest": "#262528",
+              "on-error-container": "#ffa8a3",
+              "secondary-fixed": "#ffc5ab",
+              "outline": "#767577",
+              "primary-fixed-dim": "#00deec",
+              "surface-container-lowest": "#000000",
+              "secondary": "#ff7524",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "primary-container": "#00eefc",
+              "surface-container-low": "#131315",
+              "tertiary-fixed-dim": "#b190ff",
+              "on-tertiary-fixed": "#1f0052",
+              "surface-bright": "#2c2c2f",
+              "surface": "#0e0e10",
+              "on-error": "#490006",
+              "primary-dim": "#00deec",
+              "surface-tint": "#8ff5ff",
+              "tertiary-fixed": "#bda1ff",
+              "primary-fixed": "#00eefc",
+              "tertiary": "#ac89ff",
+              "surface-dim": "#0e0e10",
+              "inverse-surface": "#fcf8fb",
+              "surface-container": "#19191c",
+              "on-secondary-fixed": "#5c2200",
+              "background": "#0e0e10",
+              "secondary-container": "#a04100",
+              "primary": "#8ff5ff",
+              "error-container": "#9f0519",
+              "on-tertiary-container": "#f8f1ff",
+              "on-primary-container": "#005359",
+              "on-secondary": "#3c1300",
+              "inverse-primary": "#006a71",
+              "on-primary": "#005d63",
+              "error-dim": "#d7383b",
+              "secondary-fixed-dim": "#ffb28d",
+              "on-surface": "#f9f5f8"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0e0e10;
+            color: #f9f5f8;
+            font-family: 'Manrope', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-8 px-4 h-screen w-64 border-r-0 bg-[#131315] shadow-[0_0_40px_rgba(255,87,34,0.05)] z-50">
+<div class="mb-12 px-4 flex items-center gap-3">
+<img alt="Larger Than Life Logo" class="w-10 h-10 object-contain" data-alt="Futuristic LTL brand logo with geometric shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTrr7pWShZiYJTa_aWb4rN8b1a__Ny_vpD3jmAIQ_jgkyd9li3G-vk45udO6gqoEv45ZAotWlU0eu7NASn_FbHzpwZNjfTq__btaTP1DZTLLFtddd2KvVBz1FQWHC41gpnt-MZOJqVGyLecN2Qp2DM8EOccphXB3U5QBe0uksT4CAKwFIUqqLNYCkeIPrI1frA7HRpEE-RpRfeffdVhBIPVb1CFY9ESv9fGKR6xCMyN2YEaSaV7GaSiD10Bhtf3Sxk4DTPGK-MMgY"/>
+<div>
+<h1 class="text-orange-500 dark:text-[#ff5722] font-black tracking-tighter text-2xl font-headline">LTL</h1>
+<p class="font-['Space_Grotesk'] uppercase tracking-widest text-[10px] text-slate-500">Mission Control</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Home -->
+<a class="flex items-center gap-4 px-4 py-3 transition-all duration-300 font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-500 dark:text-slate-400 hover:text-white hover:bg-[#262528]" href="#">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+<span>Home</span>
+</a>
+<!-- Technology (Active) -->
+<a class="flex items-center gap-4 px-4 py-3 transition-all duration-300 font-['Space_Grotesk'] uppercase tracking-widest text-xs text-orange-500 dark:text-[#ff5722] border-l-2 border-[#ff5722] bg-[#19191c] scale-[0.98] active:bg-[#ff5722]/10" href="#">
+<span class="material-symbols-outlined" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span>Technology</span>
+</a>
+<!-- Simulations -->
+<a class="flex items-center gap-4 px-4 py-3 transition-all duration-300 font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-500 dark:text-slate-400 hover:text-white hover:bg-[#262528]" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span>Simulations</span>
+</a>
+<!-- About -->
+<a class="flex items-center gap-4 px-4 py-3 transition-all duration-300 font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-500 dark:text-slate-400 hover:text-white hover:bg-[#262528]" href="#">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span>About</span>
+</a>
+</nav>
+<div class="mt-auto px-4 py-4 bg-surface-container rounded-lg">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+<span class="text-[10px] font-headline uppercase tracking-tighter text-secondary">System Online</span>
+</div>
+<p class="text-[10px] text-outline mt-1 font-body">v4.0.2 Kinetic Core</p>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen p-8 lg:p-12">
+<!-- Header Section -->
+<header class="mb-16 max-w-5xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-highest mb-6">
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="terminal">terminal</span>
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-primary">Technical Documentation / Robotics</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-headline font-black tracking-tighter mb-6 leading-none">
+                KINETIC <span class="text-secondary italic">ARMADA</span>
+</h1>
+<p class="text-xl text-on-surface-variant font-body max-w-2xl leading-relaxed">
+                Our autonomous swarm architecture integrates next-gen haptic interfaces with deep-learning navigation cores, specifically engineered for extreme Martian environments.
+            </p>
+</header>
+<!-- Featured Technology Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24">
+<!-- Main Hero Card: ATLAS-1 -->
+<div class="md:col-span-8 bg-surface-container-low overflow-hidden relative group">
+<div class="absolute top-0 right-0 p-8 z-10 text-right">
+<span class="block font-label text-[10px] text-secondary tracking-widest uppercase mb-1">Status: Operational</span>
+<span class="block font-headline text-4xl font-bold">ATLAS-1</span>
+</div>
+<div class="aspect-video w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Advanced autonomous rover with multiple sensors on red rocky terrain" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMAEdyDhvPn8Ql4BqAD_Z8lTJ-Bvo8cNsctzY_rhf7Wp60XbycpajBiD46ZlO-CD1mFgnVNN1K_Ue71QddSmj3S2wdrLyBk2AsMbWoQU0HT4wPFyotv8yBsROyo6AP0nxYWL6WEwpG4Y2PG8gQozjTMbgXjlUxGHSQ24AvUU2zUJUKz3f8OEEZIpWnpJKU9N-ZdsGcCXHjFrWXAZjrj1zuI6cNqnoWjFUHxQ0_XWoqgGAL5D9hFwsWqLf8qBiYTfs2cs87mNBd5ok')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full flex justify-between items-end">
+<div class="max-w-md">
+<h3 class="font-headline text-lg mb-2 text-primary uppercase tracking-wider">Heavy Recon Unit</h3>
+<p class="text-sm text-outline-variant font-body">Reinforced titanium-composite chassis capable of enduring 400km/h dust storms and extreme thermal cycling.</p>
+</div>
+<div class="flex gap-4">
+<div class="text-center">
+<p class="font-label text-[10px] uppercase text-outline">Torque</p>
+<p class="font-headline font-bold text-xl">1.2kNm</p>
+</div>
+<div class="text-center">
+<p class="font-label text-[10px] uppercase text-outline">Range</p>
+<p class="font-headline font-bold text-xl">850km</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Card: Robotic Arms -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="bg-surface-container p-6 flex-1 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="precision_manufacturing">precision_manufacturing</span>
+<h4 class="font-headline text-xl font-bold mb-2 uppercase">Haptic Manipulation</h4>
+<p class="text-sm text-on-surface-variant font-body leading-relaxed">6-DOF carbon-fiber limbs with 0.01mm precision. Integrated AI for autonomous sample extraction.</p>
+</div>
+<div class="mt-6 pt-6 border-t border-outline-variant/20">
+<div class="flex justify-between items-center text-xs font-label text-outline uppercase">
+<span>Precision State</span>
+<span class="text-primary">Nominal</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest mt-2 overflow-hidden">
+<div class="w-3/4 h-full bg-primary shadow-[0_0_10px_rgba(143,245,255,0.5)]"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest p-6 flex-1 relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-9xl" data-icon="grid_view">grid_view</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-2 uppercase tracking-tight">Swarm Mesh</h4>
+<p class="text-sm text-on-surface-variant font-body">Modular robotics operating as a singular neural entity for infrastructure assembly.</p>
+<button class="mt-4 inline-flex items-center gap-2 text-primary font-label text-xs uppercase tracking-widest hover:gap-3 transition-all">
+                        View Network <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Detailed Specifications Section -->
+<section class="mb-24">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="font-headline text-4xl font-black uppercase tracking-tighter">Technical Manifest</h2>
+<p class="font-body text-outline mt-2">Telemetry and hardware specifications for active units</p>
+</div>
+<div class="hidden md:block h-px flex-1 mx-12 bg-outline-variant/30"></div>
+<div class="flex gap-2">
+<button class="p-3 bg-surface-container hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+</button>
+<button class="p-3 bg-primary text-on-primary hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</button>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Row 1: MOLE-X -->
+<div class="group bg-surface-container-low hover:bg-surface-container transition-all duration-300 p-6 flex flex-wrap md:flex-nowrap items-center gap-8 border-l-4 border-transparent hover:border-secondary">
+<div class="w-16 h-16 bg-surface-container-highest flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-3xl text-outline group-hover:text-secondary transition-colors" data-icon="hardware">hardware</span>
+</div>
+<div class="flex-1 min-w-[200px]">
+<p class="font-label text-[10px] uppercase text-secondary tracking-[0.2em] mb-1">Subterranean Explorer</p>
+<h4 class="font-headline text-2xl font-bold">MOLE-X</h4>
+</div>
+<div class="hidden lg:grid grid-cols-3 gap-8 flex-1">
+<div>
+<p class="font-label text-[10px] uppercase text-outline">Payload</p>
+<p class="font-body text-sm font-semibold">45kg Geological Lab</p>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase text-outline">Propulsion</p>
+<p class="font-body text-sm font-semibold">Dual-Helix Drills</p>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase text-outline">Max Depth</p>
+<p class="font-body text-sm font-semibold">120m Lithosphere</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="px-2 py-1 bg-surface-container-highest text-[10px] font-label text-on-surface-variant uppercase tracking-tighter">Active</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors cursor-pointer" data-icon="open_in_new">open_in_new</span>
+</div>
+</div>
+<!-- Row 2: ATLAS-1 (Already detailed above, but listed here as spec) -->
+<div class="group bg-surface-container-low hover:bg-surface-container transition-all duration-300 p-6 flex flex-wrap md:flex-nowrap items-center gap-8 border-l-4 border-transparent hover:border-secondary">
+<div class="w-16 h-16 bg-surface-container-highest flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-3xl text-outline group-hover:text-secondary transition-colors" data-icon="rocket">rocket</span>
+</div>
+<div class="flex-1 min-w-[200px]">
+<p class="font-label text-[10px] uppercase text-secondary tracking-[0.2em] mb-1">Heavy Logistics</p>
+<h4 class="font-headline text-2xl font-bold">ATLAS-1</h4>
+</div>
+<div class="hidden lg:grid grid-cols-3 gap-8 flex-1">
+<div>
+<p class="font-label text-[10px] uppercase text-outline">Payload</p>
+<p class="font-body text-sm font-semibold">250kg Cargo/Hab</p>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase text-outline">Propulsion</p>
+<p class="font-body text-sm font-semibold">6x6 Independent Electric</p>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase text-outline">Max Slope</p>
+<p class="font-body text-sm font-semibold">45° Inclination</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="px-2 py-1 bg-surface-container-highest text-[10px] font-label text-on-surface-variant uppercase tracking-tighter">Maintenance</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors cursor-pointer" data-icon="open_in_new">open_in_new</span>
+</div>
+</div>
+<!-- Row 3: SWARM-7 -->
+<div class="group bg-surface-container-low hover:bg-surface-container transition-all duration-300 p-6 flex flex-wrap md:flex-nowrap items-center gap-8 border-l-4 border-transparent hover:border-secondary">
+<div class="w-16 h-16 bg-surface-container-highest flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-3xl text-outline group-hover:text-secondary transition-colors" data-icon="hub">hub</span>
+</div>
+<div class="flex-1 min-w-[200px]">
+<p class="font-label text-[10px] uppercase text-secondary tracking-[0.2em] mb-1">Collective Intelligence</p>
+<h4 class="font-headline text-2xl font-bold">SWARM-7</h4>
+</div>
+<div class="hidden lg:grid grid-cols-3 gap-8 flex-1">
+<div>
+<p class="font-label text-[10px] uppercase text-outline">Units</p>
+<p class="font-body text-sm font-semibold">24 Modular Nodes</p>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase text-outline">Core</p>
+<p class="font-body text-sm font-semibold">Quantum Mesh Link</p>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase text-outline">Function</p>
+<p class="font-body text-sm font-semibold">Rapid Base Const.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="px-2 py-1 bg-surface-container-highest text-[10px] font-label text-on-surface-variant uppercase tracking-tighter">Standby</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors cursor-pointer" data-icon="open_in_new">open_in_new</span>
+</div>
+</div>
+</div>
+</section>
+<!-- UI Call to Action / Footer Equivalent -->
+<footer class="mt-32 border-t border-outline-variant/10 pt-16 pb-8">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-xs">
+<div class="text-orange-500 font-black text-3xl font-headline tracking-tighter mb-4">LTL</div>
+<p class="text-sm text-outline font-body">Leading the way in extra-planetary colonization and robotic exploration through Kinetic Observatory standards.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div>
+<h5 class="font-label text-[10px] uppercase tracking-widest text-primary mb-6">Protocols</h5>
+<ul class="space-y-3 font-body text-sm text-on-surface-variant">
+<li><a class="hover:text-white transition-colors" href="#">Safety Standards</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Interface Guidelines</a></li>
+<li><a class="hover:text-white transition-colors" href="#">AI Ethics Core</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label text-[10px] uppercase tracking-widest text-primary mb-6">Deep Space</h5>
+<ul class="space-y-3 font-body text-sm text-on-surface-variant">
+<li><a class="hover:text-white transition-colors" href="#">Mars Habitats</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Orbital Comms</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Resource Mining</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h5 class="font-label text-[10px] uppercase tracking-widest text-primary mb-6">Connection</h5>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-secondary" data-icon="language">language</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-secondary" data-icon="public">public</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-secondary" data-icon="mail">mail</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-outline-variant/5 flex justify-between items-center text-[10px] font-label uppercase text-outline tracking-widest">
+<span>© 2024 LTL INDUSTRIES • MISSION CONTROL</span>
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_#8ff5ff]"></span> ENCRYPTED LINK SECURE</span>
+</div>
+</footer>
+</main>
+</body></html>

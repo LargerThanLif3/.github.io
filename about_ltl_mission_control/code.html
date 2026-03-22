@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About LTL | Larger Than Life</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface": "#0e0e10",
+                        "inverse-on-surface": "#565457",
+                        "on-error": "#490006",
+                        "error-container": "#9f0519",
+                        "surface-container-low": "#131315",
+                        "primary-fixed": "#00eefc",
+                        "surface-bright": "#2c2c2f",
+                        "surface-tint": "#8ff5ff",
+                        "secondary-fixed": "#ffc5ab",
+                        "inverse-surface": "#fcf8fb",
+                        "tertiary-dim": "#874cff",
+                        "error-dim": "#d7383b",
+                        "on-primary-container": "#005359",
+                        "tertiary": "#ac89ff",
+                        "error": "#ff716c",
+                        "surface-container-lowest": "#000000",
+                        "on-secondary": "#3c1300",
+                        "secondary": "#ff7524",
+                        "primary-container": "#00eefc",
+                        "on-tertiary-fixed": "#1f0052",
+                        "surface-container-highest": "#262528",
+                        "tertiary-fixed": "#bda1ff",
+                        "on-tertiary-container": "#f8f1ff",
+                        "on-primary-fixed": "#003f43",
+                        "on-surface-variant": "#adaaad",
+                        "surface-container-high": "#1f1f22",
+                        "secondary-dim": "#ff7524",
+                        "surface-container": "#19191c",
+                        "on-tertiary": "#290067",
+                        "on-surface": "#f9f5f8",
+                        "on-secondary-container": "#fff6f3",
+                        "surface-dim": "#0e0e10",
+                        "background": "#0e0e10",
+                        "secondary-container": "#a04100",
+                        "primary-dim": "#00deec",
+                        "inverse-primary": "#006a71",
+                        "primary-fixed-dim": "#00deec",
+                        "on-tertiary-fixed-variant": "#4700a7",
+                        "secondary-fixed-dim": "#ffb28d",
+                        "on-error-container": "#ffa8a3",
+                        "on-secondary-fixed": "#5c2200",
+                        "outline-variant": "#48474a",
+                        "tertiary-fixed-dim": "#b190ff",
+                        "primary": "#8ff5ff",
+                        "tertiary-container": "#7000ff",
+                        "on-primary-fixed-variant": "#005e64",
+                        "on-primary": "#005d63",
+                        "on-background": "#f9f5f8",
+                        "surface-variant": "#262528",
+                        "outline": "#767577",
+                        "on-secondary-fixed-variant": "#8a3700"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .grid-overlay {
+            background-image: radial-gradient(circle, rgba(143, 245, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glass-panel {
+            background: rgba(38, 37, 40, 0.3);
+            backdrop-filter: blur(16px);
+            border-top: 0.5px solid rgba(143, 245, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl shadow-[0_0_20px_rgba(0,240,255,0.05)] flex justify-between items-center px-8 py-4 w-full">
+<div class="text-2xl font-bold tracking-widest text-cyan-400 dark:text-cyan-400 font-headline">LTL</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-xs text-neutral-400 hover:text-cyan-400 transition-colors" href="#">Home</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-xs text-neutral-400 hover:text-cyan-400 transition-colors" href="#">Technology</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-xs text-neutral-400 hover:text-cyan-400 transition-colors" href="#">Simulations</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-xs text-orange-500 border-b-2 border-orange-500 pb-1" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-neutral-400 hover:text-cyan-400 transition-colors" data-icon="settings">settings</button>
+<button class="material-symbols-outlined text-neutral-400 hover:text-cyan-400 transition-colors" data-icon="account_circle">account_circle</button>
+</div>
+</header>
+<!-- Side Navigation (Web Only) -->
+<aside class="hidden lg:flex flex-col fixed left-0 top-0 h-full h-screen w-64 border-r border-neutral-800/30 bg-neutral-950 z-40 pt-24 px-6">
+<div class="mb-10">
+<h2 class="text-orange-500 font-bold tracking-tighter font-headline text-lg">LTL CORE</h2>
+<p class="text-[10px] text-neutral-500 font-headline uppercase tracking-widest">Kinetic Observatory v1.0</p>
+</div>
+<nav class="flex flex-col gap-2">
+<div class="flex items-center gap-4 px-4 py-3 text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900 transition-colors group cursor-pointer">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-['Space_Grotesk'] font-medium">Home</span>
+</div>
+<div class="flex items-center gap-4 px-4 py-3 text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900 transition-colors group cursor-pointer">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="memory">memory</span>
+<span class="font-['Space_Grotesk'] font-medium">Technology</span>
+</div>
+<div class="flex items-center gap-4 px-4 py-3 text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900 transition-colors group cursor-pointer">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="biotech">biotech</span>
+<span class="font-['Space_Grotesk'] font-medium">Simulations</span>
+</div>
+<div class="flex items-center gap-4 px-4 py-3 bg-cyan-950/30 text-cyan-400 border-l-4 border-cyan-400 transition-all cursor-default">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-['Space_Grotesk'] font-medium">About</span>
+</div>
+</nav>
+<div class="mt-auto pb-8 space-y-4">
+<button class="w-full bg-secondary text-on-secondary py-3 text-xs font-headline font-bold uppercase tracking-widest rounded-sm hover:brightness-110 transition-all">
+                Initialize Simulation
+            </button>
+<div class="flex flex-col gap-2 border-t border-neutral-800/30 pt-4">
+<div class="flex items-center gap-3 text-[10px] text-neutral-500 uppercase tracking-widest cursor-pointer hover:text-neutral-200 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="help">help</span> Support
+                </div>
+<div class="flex items-center gap-3 text-[10px] text-neutral-500 uppercase tracking-widest cursor-pointer hover:text-neutral-200 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="sensors">sensors</span> System Status
+                </div>
+</div>
+</div>
+</aside>
+<main class="lg:pl-64 min-h-screen relative">
+<div class="grid-overlay absolute inset-0 pointer-events-none opacity-20"></div>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-end px-8 pb-24 md:px-20 md:pb-32 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Mars Landscape" class="w-full h-full object-cover opacity-60" data-alt="Futuristic industrial robotic arm extending toward Martian horizon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDljf6Wg-6nH8KGTlyBcZ2pCRfYAugac-EUh45pqF7MmEJ84ymsT7FXt_4q55uztTU6RlXrcagOxLMETuWf-j-5fw1TkMLPNP5gXrrK4n_Z31lf-rwr1ysx76w-7s2uUkHI2rJGTXxnWgY1fGN9AMLUttcTDYpMBM1EWgaATW-cg1BUnlm89y6sDlWcsIl0W7bUex8cY8cO2RigRKVk3E2UzBI0IhOLZYt8HYHQkVJ5utCEkA7CsWGc7Ptf0Ezp1jlc9aG2v30FyhU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<div class="flex items-center gap-4 mb-6">
+<div class="h-px w-12 bg-secondary"></div>
+<span class="text-secondary font-label text-sm uppercase tracking-[0.3em]">Operational Phase III</span>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter leading-none mb-8">
+                    Pioneering <br/><span class="text-primary-fixed">The Void</span>
+</h1>
+<p class="font-body text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                    We don't just explore the solar system; we build it. Larger Than Life (LTL) is the infrastructure layer for the next stage of human civilization.
+                </p>
+</div>
+</section>
+<!-- Mission & Vision: Bento Grid -->
+<section class="py-32 px-8 md:px-20 relative">
+<div class="mb-20">
+<h2 class="font-headline text-4xl font-bold tracking-tight mb-4">Strategic Imperatives</h2>
+<div class="h-1 w-20 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Mission Card -->
+<div class="md:col-span-7 bg-surface-container-low p-10 flex flex-col justify-between group">
+<div class="space-y-6">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="rocket">rocket</span>
+<h3 class="font-headline text-3xl font-bold">The Mission</h3>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                            To deploy and sustain fully autonomous robotic ecosystems across the asteroid belt and beyond. We are creating the kinetic foundation for permanent human expansion into deep space.
+                        </p>
+</div>
+<div class="mt-12 flex items-center gap-4">
+<span class="text-[10px] font-label text-primary uppercase tracking-[0.2em]">Priority Alpha</span>
+<div class="flex-grow h-px bg-outline-variant/30"></div>
+</div>
+</div>
+<!-- Vision Card -->
+<div class="md:col-span-5 bg-surface-container p-10 border-t border-primary/20 relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 opacity-5">
+<span class="material-symbols-outlined text-[15rem]" data-icon="visibility">visibility</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline text-2xl font-bold mb-6">The Vision</h3>
+<p class="font-body text-on-surface-variant mb-10 leading-relaxed">
+                            A solar system where resources are managed by intelligent swarms, ensuring that Earth remains a garden while the stars become our workshop.
+                        </p>
+<div class="bg-surface-container-highest p-4 rounded-sm">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-2 h-2 bg-secondary animate-pulse"></div>
+<span class="text-[10px] font-label text-secondary uppercase tracking-widest">Live Feed: Valles Marineris</span>
+</div>
+<div class="h-24 bg-black/40 w-full overflow-hidden flex items-center justify-center">
+<span class="text-xs text-neutral-600 font-label tracking-tighter italic">ROVER LINK ESTABLISHED...</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Automation Card -->
+<div class="md:col-span-12 bg-surface-container-high p-10 flex items-center justify-between gap-12 border-l-4 border-secondary">
+<div class="max-w-2xl">
+<h3 class="font-headline text-2xl font-bold mb-4">Planetary Automation</h3>
+<p class="font-body text-on-surface-variant">
+                            Our proprietary Kinetic Neural Nets allow for millisecond decision-making in high-radiation environments without terrestrial oversight.
+                        </p>
+</div>
+<button class="hidden md:flex items-center gap-3 text-primary font-label text-xs uppercase tracking-widest group">
+                        Technical Specs <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Our History: Narrative Timeline -->
+<section class="py-32 bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
+<div class="px-8 md:px-20 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
+<div>
+<h2 class="font-headline text-5xl font-bold tracking-tighter mb-12">Genesis of the <br/><span class="text-secondary">K-1 Pioneer</span></h2>
+<div class="space-y-16">
+<div class="relative pl-10 border-l border-outline-variant">
+<div class="absolute -left-[5px] top-0 w-2 h-2 bg-primary"></div>
+<span class="text-primary font-label text-lg font-bold">2084</span>
+<h4 class="font-headline text-xl font-bold mt-2">Founding in New Tokyo</h4>
+<p class="font-body text-on-surface-variant mt-3 leading-relaxed">
+                                    LTL was founded in the subterranean labs of the New Tokyo Arcology with a single goal: build a machine that could survive the Jovian radiation belts.
+                                </p>
+</div>
+<div class="relative pl-10 border-l border-outline-variant">
+<div class="absolute -left-[5px] top-0 w-2 h-2 bg-secondary"></div>
+<span class="text-secondary font-label text-lg font-bold">2092</span>
+<h4 class="font-headline text-xl font-bold mt-2">The First Spark</h4>
+<p class="font-body text-on-surface-variant mt-3 leading-relaxed">
+                                    Activation of the first K-1 Prototype. It achieved 99.9% autonomy during the 14-month trial in the Gobi Lunar Analog site.
+                                </p>
+</div>
+<div class="relative pl-10 border-l border-outline-variant">
+<div class="absolute -left-[5px] top-0 w-2 h-2 bg-white"></div>
+<span class="text-white font-label text-lg font-bold">2105</span>
+<h4 class="font-headline text-xl font-bold mt-2">Mars Landing</h4>
+<p class="font-body text-on-surface-variant mt-3 leading-relaxed">
+                                    The K-1 Pioneer touches down at Jezero Crater, beginning the first automated colony pre-construction phase.
+                                </p>
+</div>
+</div>
+</div>
+<div class="sticky top-32">
+<div class="relative aspect-square glass-panel p-8">
+<img alt="K-1 Blueprint" class="w-full h-full object-cover mix-blend-screen opacity-40" data-alt="Technical schematic overlay of a Mars rover prototype" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkhgpc2V-d39uS1smpphR5LzUGHDpV6cbc--2C9rp7kldZ0TCRytnbAeLaek7SqaqT7igkXJsmm_rbDFV2sdJ8Lr6GQAbAmj4OP23M6XQgtus0hY6vqsjBNTulsp1UUZZhc1cW4kRigehev7qop9Pymu951fdbentIxNQsVKD0TDm3hrZ_ssPpz3Ctvt_aZqIJe01DlHSswyrZEUtw1SzZ-UAA9nKLOMYZ60yUwBrsypGqEGsRHhzj_V4unIfrC2xNIo2qiBsZT9s"/>
+<div class="absolute inset-0 border border-primary/10 m-4"></div>
+<div class="absolute bottom-12 left-12">
+<span class="bg-primary text-on-primary text-[10px] font-label px-3 py-1 uppercase tracking-widest">Classified // L3 Access</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission Control: Team -->
+<section class="py-32 px-8 md:px-20">
+<div class="text-center mb-24">
+<span class="text-primary font-label text-xs uppercase tracking-[0.4em] block mb-4">Command Personnel</span>
+<h2 class="font-headline text-5xl font-bold tracking-tight">Mission Control</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Team Member 1 -->
+<div class="group">
+<div class="relative aspect-[3/4] mb-8 overflow-hidden bg-surface-container">
+<img alt="Dr. Elias Vance" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Professional headshot of a mature engineer with a neutral expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvdFFAnnv15GTM2bVC0dHI5vWT-JzR1tdk1mZ2UygqMHoLJCgqugzMiRcY_Do3Ge0rwVx9g4f1o-SkEsGmZ3PAYub8n18a5FVq8SdqpzHsSq_3W3V-WvkhhW6Whmr8aXc-R5LytPkwPJR0AyOd2Xh_KKYmRn9xfCs-xe_ikXz9ntycxMbTPK1XvhycpXvZDmOsbr1jEjwsXnYKOYIVXb6JqzAkD9rvyp9i5Uy-IdmyVT4a5adsxPbjtAv_gjT1RDeqfPj9ByAdjbs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+<div class="absolute top-4 right-4 h-8 w-8 border-t-2 border-r-2 border-primary group-hover:scale-110 transition-transform"></div>
+</div>
+<h3 class="font-headline text-xl font-bold">Dr. Elias Vance</h3>
+<p class="text-primary font-label text-xs uppercase tracking-widest mt-1">CDR // Engineering</p>
+<p class="font-body text-sm text-on-surface-variant mt-4 leading-relaxed">
+                        Former NASA director and lead architect of the LTL kinetic propulsion system.
+                    </p>
+</div>
+<!-- Team Member 2 -->
+<div class="group">
+<div class="relative aspect-[3/4] mb-8 overflow-hidden bg-surface-container">
+<img alt="Sarah Chen" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Professional portrait of a woman looking confidently at the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC18lD9lX8QRhu5qV20JmX4850zHAewDY9xCXS-j0dkRlO80IIVk9bzOuCd17jeqtKVaxH6k_Ktd4bTLuqwPwnwcBtRaZ6YQfky1t9LNZva-W4w1cb8NXZBOxmtI0io99pAzxlUq7n30cG3lQU7TYykqIKKQIWNq6vPX65ECqYsbyyfU0j1Nivp1PkldIVwzmQ07szrBg7utMQkPgTFBp3FNI3C1Vb1kcrBSRs6uZUbsTQN75YO1aIahCMRZM0Bct4SkcGJt9ZWPUw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+<div class="absolute top-4 right-4 h-8 w-8 border-t-2 border-r-2 border-secondary group-hover:scale-110 transition-transform"></div>
+</div>
+<h3 class="font-headline text-xl font-bold">Sarah Chen</h3>
+<p class="text-secondary font-label text-xs uppercase tracking-widest mt-1">OPS // Logistics</p>
+<p class="font-body text-sm text-on-surface-variant mt-4 leading-relaxed">
+                        Specializes in deep-space supply chain automation and orbital rendezvous protocols.
+                    </p>
+</div>
+<!-- Team Member 3 -->
+<div class="group">
+<div class="relative aspect-[3/4] mb-8 overflow-hidden bg-surface-container">
+<img alt="Marcus Thorne" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Professional portrait of a male scientist with focused expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZm23QecynmSAEQczMDJFnMZoojVUn2wzC2VIvZOMH3pmvp9C5FY47PS0MZ8wtTju0tGZKboKaMiCLQGZCO9stGYv8d-xJEnqAcgZzR1sQv3VftfoWRbjrxF7Dfh7t-lR3a0uThMw3SnaYBJYWf_76DM48JExtlFw__UZudS4kLwcGtvJty1XWgfFa-2kXXaEADKNVoHbn6mSrFZXIS_M3yTNI-6IsGIFq5N97eypUHGtrU02fX6aLhJpNDq4v-OMdCN3liIBOphQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+<div class="absolute top-4 right-4 h-8 w-8 border-t-2 border-r-2 border-tertiary group-hover:scale-110 transition-transform"></div>
+</div>
+<h3 class="font-headline text-xl font-bold">Marcus Thorne</h3>
+<p class="text-tertiary font-label text-xs uppercase tracking-widest mt-1">SCI // Neural Nets</p>
+<p class="font-body text-sm text-on-surface-variant mt-4 leading-relaxed">
+                        Pioneer of non-linear AI ethics and supervisor of the K-1 consciousness matrix.
+                    </p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-40 px-8 flex flex-col items-center text-center relative overflow-hidden">
+<div class="absolute -z-10 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full"></div>
+<h2 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter mb-10">Expand the <br/>Human Horizon.</h2>
+<p class="font-body text-on-surface-variant text-lg max-w-2xl mb-12">
+                LTL is currently accepting orbital partnerships for the 2125 Venusian Observation Phase.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-primary text-on-primary px-12 py-5 font-headline font-bold uppercase tracking-[0.2em] hover:shadow-[0_0_30px_rgba(143,245,255,0.3)] transition-all">
+                    Join the Mission
+                </button>
+<button class="border border-outline px-12 py-5 font-headline font-bold uppercase tracking-[0.2em] hover:bg-white/5 transition-all">
+                    Contact Command
+                </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-neutral-900 bg-black flex flex-col items-center gap-6 px-10 w-full">
+<div class="text-orange-500 font-black font-headline text-2xl tracking-widest">LTL</div>
+<nav class="flex gap-8">
+<a class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em] uppercase text-neutral-600 hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em] uppercase text-neutral-600 hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em] uppercase text-neutral-600 hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">Orbital Logistics</a>
+</nav>
+<div class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em] uppercase text-neutral-600">
+                © 2124 LARGER THAN LIFE. ALL SYSTEMS OPERATIONAL.
+            </div>
+</footer>
+</main>
+</body></html>

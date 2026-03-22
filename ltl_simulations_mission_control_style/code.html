@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#565457",
+              "on-secondary-container": "#fff6f3",
+              "on-tertiary": "#290067",
+              "on-primary-fixed": "#003f43",
+              "tertiary-container": "#7000ff",
+              "on-primary-fixed-variant": "#005e64",
+              "tertiary-dim": "#874cff",
+              "on-surface-variant": "#adaaad",
+              "surface-variant": "#262528",
+              "secondary-dim": "#ff7524",
+              "on-secondary-fixed-variant": "#8a3700",
+              "surface-container-high": "#1f1f22",
+              "on-background": "#f9f5f8",
+              "outline-variant": "#48474a",
+              "error": "#ff716c",
+              "surface-container-highest": "#262528",
+              "on-error-container": "#ffa8a3",
+              "secondary-fixed": "#ffc5ab",
+              "outline": "#767577",
+              "primary-fixed-dim": "#00deec",
+              "surface-container-lowest": "#000000",
+              "secondary": "#ff7524",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "primary-container": "#00eefc",
+              "surface-container-low": "#131315",
+              "tertiary-fixed-dim": "#b190ff",
+              "on-tertiary-fixed": "#1f0052",
+              "surface-bright": "#2c2c2f",
+              "surface": "#0e0e10",
+              "on-error": "#490006",
+              "primary-dim": "#00deec",
+              "surface-tint": "#8ff5ff",
+              "tertiary-fixed": "#bda1ff",
+              "primary-fixed": "#00eefc",
+              "tertiary": "#ac89ff",
+              "surface-dim": "#0e0e10",
+              "inverse-surface": "#fcf8fb",
+              "surface-container": "#19191c",
+              "on-secondary-fixed": "#5c2200",
+              "background": "#0e0e10",
+              "secondary-container": "#a04100",
+              "primary": "#8ff5ff",
+              "error-container": "#9f0519",
+              "on-tertiary-container": "#f8f1ff",
+              "on-primary-container": "#005359",
+              "on-secondary": "#3c1300",
+              "inverse-primary": "#006a71",
+              "on-primary": "#005d63",
+              "error-dim": "#d7383b",
+              "secondary-fixed-dim": "#ffb28d",
+              "on-surface": "#f9f5f8"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-gradient {
+            background: radial-gradient(circle at 0% 0%, rgba(143, 245, 255, 0.05) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<!-- SideNavBar Anchor -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-8 px-4 h-screen w-64 border-r-0 bg-black dark:bg-[#000000] bg-[#131315] shadow-[0_0_40px_rgba(255,87,34,0.05)] z-50">
+<div class="mb-12 px-4 flex items-center gap-3">
+<img alt="Larger Than Life Logo" class="w-10 h-10 object-contain" data-alt="Futuristic LTL brand logo with geometric lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRz176vlxXp9ad43b330jhYJqaunWEpn17uUB0ilqWy3QAqbHIFwP2b6A41VfENVJ9t2sEHziK0nOaKnJL6qt149ePXOmb7wEzfT9G_XxO0SKuj35bWz4TtAym8xBOrmU9Q2qZBA7Rrx8CKpxPHVYb93rp-Fgcieouw3v2X9BizTpk7LtXuDXHOhbJ1X4DwBZ8xHYrC7I-alvoayXKwxegtL7eGK56T4azLCYrYAiMyqt56h7ggpzH0NDUH-W8ShBaD-oP_WMnPww"/>
+<div>
+<h1 class="text-orange-500 dark:text-[#ff5722] font-black tracking-tighter text-2xl">LTL</h1>
+<p class="font-['Space_Grotesk'] uppercase tracking-widest text-[10px] text-slate-500">Mission Control</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-2">
+<!-- Home -->
+<a class="flex items-center gap-4 py-3 px-4 transition-all duration-300 hover:bg-[#262528] text-slate-500 dark:text-slate-400 hover:text-white group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-['Space_Grotesk'] uppercase tracking-widest text-xs">Home</span>
+</a>
+<!-- Technology -->
+<a class="flex items-center gap-4 py-3 px-4 transition-all duration-300 hover:bg-[#262528] text-slate-500 dark:text-slate-400 hover:text-white group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="font-['Space_Grotesk'] uppercase tracking-widest text-xs">Technology</span>
+</a>
+<!-- Simulations (Active) -->
+<a class="flex items-center gap-4 py-3 px-4 transition-all duration-300 text-orange-500 dark:text-[#ff5722] border-l-2 border-[#ff5722] bg-[#19191c]" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+<span class="font-['Space_Grotesk'] uppercase tracking-widest text-xs">Simulations</span>
+</a>
+<!-- About -->
+<a class="flex items-center gap-4 py-3 px-4 transition-all duration-300 hover:bg-[#262528] text-slate-500 dark:text-slate-400 hover:text-white group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="info">info</span>
+<span class="font-['Space_Grotesk'] uppercase tracking-widest text-xs">About</span>
+</a>
+</nav>
+<div class="mt-auto px-4">
+<div class="p-4 bg-surface-container rounded-sm border-l-2 border-secondary/50">
+<p class="font-label text-[10px] uppercase tracking-tighter text-secondary mb-1">System Status</p>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-[11px] font-label text-on-surface-variant">RL-NODE ACTIVE</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen p-8 lg:p-12 kinetic-gradient">
+<!-- Hero Header: Asymmetric Layout -->
+<header class="mb-16 grid grid-cols-12 gap-8 items-end">
+<div class="col-span-12 lg:col-span-8">
+<div class="inline-block bg-surface-container-highest px-3 py-1 mb-6">
+<span class="text-primary font-label text-[10px] uppercase tracking-[0.2em]">Project: Crimson Frontier</span>
+</div>
+<h2 class="font-headline text-5xl lg:text-7xl font-bold tracking-tighter text-on-background leading-none mb-6">
+                    PLANETARY <br/><span class="text-secondary">OBSERVATORY</span>
+</h2>
+<p class="font-body text-lg text-on-surface-variant max-w-xl">
+                    High-fidelity reinforcement learning simulations for extraterrestrial infrastructure and autonomous environmental mapping.
+                </p>
+</div>
+<div class="col-span-12 lg:col-span-4 text-right">
+<div class="font-label text-xs text-secondary/60 mb-2 uppercase tracking-widest italic">Co-ordinates</div>
+<div class="font-headline text-2xl font-light text-on-surface tracking-widest">18.65°N, 226.2°E</div>
+</div>
+</header>
+<!-- Bento Grid Sections -->
+<section class="grid grid-cols-12 gap-6">
+<!-- Orbital Pathing AI (Large Feature) -->
+<div class="col-span-12 lg:col-span-7 bg-surface-container-low p-8 relative overflow-hidden group min-h-[450px] flex flex-col justify-end">
+<div class="absolute inset-0 opacity-20 pointer-events-none transition-transform duration-700 group-hover:scale-105" data-alt="Abstract orbital map with digital pathing lines" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCc3TFGBniUnKpnI7i5_DAaR7i9y8sB2pcoafCqWH1M9wHo-Syu43_Hr_2eznJmGuiTB0iojpVe8Zv3Znw9UqWWjLWLtsNmk5ANLFzoF4_zqsUvh2mwmrsE02N-Huwhy78QhJge7nZEACz469tKna9Wu4i0PfY4-fMvyHQnUtp3dZdpPt_GG4xSrhyM4xcCSb3zRg4VlFEZQiMiptTi5ikvE520pq25VwidLzRjfxnRqm_QeP88YtmPNELnhQJqc65YrLIzQNzRALc'); background-size: cover;"></div>
+<div class="relative z-10">
+<h3 class="font-headline text-3xl font-bold mb-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="navigation">navigation</span>
+                        Orbital Pathing AI
+                    </h3>
+<p class="font-body text-on-surface-variant mb-8 max-w-md">
+                        Real-time trajectory refinement using deep Q-learning networks for low-atmosphere debris avoidance and automated satellite constellation deployment.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-6 py-3 font-label text-xs uppercase tracking-widest font-bold rounded-sm transition-all hover:brightness-110">Initialize RL</button>
+<button class="border border-outline-variant text-on-surface px-6 py-3 font-label text-xs uppercase tracking-widest font-bold rounded-sm hover:bg-surface-container-highest transition-all">View Logs</button>
+</div>
+</div>
+</div>
+<!-- Habitat Simulation Environment (Medium Feature) -->
+<div class="col-span-12 lg:col-span-5 bg-surface-container-low p-8 border-t-2 border-primary/20 flex flex-col">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="domain">domain</span>
+<div class="text-right">
+<p class="font-label text-[10px] text-secondary uppercase tracking-widest">Environment 04</p>
+<p class="font-headline text-xl">Habitat Sim</p>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-6">
+<div class="space-y-2">
+<div class="flex justify-between font-label text-[10px] uppercase">
+<span>Oxygen Stability</span>
+<span class="text-primary">98.4%</span>
+</div>
+<div class="h-1 bg-surface-container-highest w-full overflow-hidden">
+<div class="h-full bg-primary w-[98%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between font-label text-[10px] uppercase">
+<span>Radiation Shielding</span>
+<span class="text-secondary">Active</span>
+</div>
+<div class="h-1 bg-surface-container-highest w-full overflow-hidden">
+<div class="h-full bg-secondary w-[72%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-12 bg-surface-container p-4 rounded-sm flex items-center justify-between">
+<div>
+<p class="font-label text-[10px] text-on-surface-variant uppercase">Simulated Population</p>
+<p class="font-headline text-lg font-bold">120 Units</p>
+</div>
+<span class="material-symbols-outlined text-primary-dim" data-icon="groups">groups</span>
+</div>
+</div>
+<!-- Planetary Environment Mapping (Technical Strip) -->
+<div class="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Data Point 1 -->
+<div class="bg-surface-container p-6 border-l-2 border-outline-variant hover:border-primary transition-colors cursor-pointer group">
+<div class="flex items-center justify-between mb-4">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Terrain Map</p>
+<span class="material-symbols-outlined text-sm group-hover:scale-125 transition-transform" data-icon="map">map</span>
+</div>
+<p class="font-headline text-xl mb-2">Topographic Mesh</p>
+<p class="font-body text-sm text-on-surface-variant">Lidar-scanned surface geometry at 0.5m resolution for rover navigation.</p>
+</div>
+<!-- Data Point 2 -->
+<div class="bg-surface-container p-6 border-l-2 border-outline-variant hover:border-primary transition-colors cursor-pointer group">
+<div class="flex items-center justify-between mb-4">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Neural Render</p>
+<span class="material-symbols-outlined text-sm group-hover:scale-125 transition-transform" data-icon="auto_videocam">auto_videocam</span>
+</div>
+<p class="font-headline text-xl mb-2">NeRF Visualization</p>
+<p class="font-body text-sm text-on-surface-variant">AI-generated 3D environments synthesized from static sensor feeds.</p>
+</div>
+<!-- Data Point 3 -->
+<div class="bg-surface-container p-6 border-l-2 border-outline-variant hover:border-primary transition-colors cursor-pointer group">
+<div class="flex items-center justify-between mb-4">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Sensor Array</p>
+<span class="material-symbols-outlined text-sm group-hover:scale-125 transition-transform" data-icon="waves">waves</span>
+</div>
+<p class="font-headline text-xl mb-2">Thermal Anomalies</p>
+<p class="font-body text-sm text-on-surface-variant">Real-time detection of subsurface thermal vents and ice deposits.</p>
+</div>
+</div>
+<!-- Deep Learning Visualization (The "Kinetic" Element) -->
+<div class="col-span-12 lg:col-span-12 bg-surface-container-lowest p-1 border-t border-outline-variant/30 mt-8">
+<div class="bg-surface p-8 flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/3">
+<h4 class="font-headline text-2xl font-bold mb-4 uppercase tracking-tighter">RL Performance</h4>
+<div class="space-y-6">
+<div class="flex gap-4 items-center">
+<span class="font-label text-xs text-secondary bg-secondary/10 px-2 py-1">EPOCH 944</span>
+<div class="h-[1px] flex-1 bg-outline-variant"></div>
+</div>
+<p class="font-body text-sm text-on-surface-variant italic leading-relaxed">
+                                "The agent has developed a survival heuristic that prioritizes solar exposure during dust storm periods with a 92% confidence interval."
+                            </p>
+<div class="flex items-center gap-6">
+<div>
+<p class="font-label text-[10px] uppercase text-on-surface-variant">Convergence</p>
+<p class="font-headline text-xl text-primary">0.0014</p>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase text-on-surface-variant">Entropy</p>
+<p class="font-headline text-xl text-secondary">0.42</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-2/3 h-64 bg-surface-container-low relative overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, #8ff5ff 1px, transparent 1px); background-size: 20px 20px;"></div>
+<!-- Simulated Radar / Wave Graph Visualization -->
+<div class="relative w-full h-full flex items-center justify-center">
+<div class="absolute w-48 h-48 border border-primary/20 rounded-full animate-pulse"></div>
+<div class="absolute w-32 h-32 border border-secondary/20 rounded-full"></div>
+<div class="w-full px-12 flex items-end gap-1 h-32">
+<div class="flex-1 bg-primary/40 h-[20%]"></div>
+<div class="flex-1 bg-primary/40 h-[45%]"></div>
+<div class="flex-1 bg-primary/40 h-[30%]"></div>
+<div class="flex-1 bg-primary/40 h-[60%]"></div>
+<div class="flex-1 bg-secondary/60 h-[85%]"></div>
+<div class="flex-1 bg-primary/40 h-[50%]"></div>
+<div class="flex-1 bg-primary/40 h-[40%]"></div>
+<div class="flex-1 bg-primary/40 h-[70%]"></div>
+<div class="flex-1 bg-primary/40 h-[55%]"></div>
+<div class="flex-1 bg-primary/40 h-[30%]"></div>
+<div class="flex-1 bg-secondary/60 h-[45%]"></div>
+<div class="flex-1 bg-primary/40 h-[25%]"></div>
+</div>
+</div>
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+<span class="w-2 h-2 bg-secondary rounded-full"></span>
+<span class="w-2 h-2 bg-outline rounded-full"></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer / Technical Metadata -->
+<footer class="mt-24 pt-12 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-start gap-8 opacity-60">
+<div>
+<p class="font-label text-[10px] uppercase tracking-widest mb-4">Core Engine: NeuroLink 5.0</p>
+<div class="flex gap-6">
+<a class="text-xs hover:text-primary transition-colors" href="#">Safety Protocol</a>
+<a class="text-xs hover:text-primary transition-colors" href="#">Ethics Mandate</a>
+<a class="text-xs hover:text-primary transition-colors" href="#">API Access</a>
+</div>
+</div>
+<div class="text-right">
+<p class="font-body text-xs mb-2">Larger Than Life AI Systems © 2024</p>
+<p class="font-label text-[10px] uppercase tracking-[0.3em]">Built for the Void</p>
+</div>
+</footer>
+</main>
+</body></html>
